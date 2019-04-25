@@ -43,4 +43,14 @@ class BankAccount
       puts "Sorry your withdraw cannot be completed please try again"
     end
   end
+  def overall_balance
+    @overall_balance = @savings_balance + @checking_balance
+    self
+  end
+  def account_information
+    puts "Your account number is #{account_number}"
+    puts "Your total balance is #{@overall_balance}"
+    puts "Checking account balance is #{@checking_balance}"
+    puts "Saving account balance is #{@savings_balance}"
+  end
 end
